@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://via.placeholder.com/30" alt="Logo"> </div>
+            <nav class="navigation">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-user-circle"></i> Account</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Chart</a></li>
+                    <li><a href="#"><i class="fas fa-wallet"></i> Wallet</a></li>
+                    <li><a href="#"><i class="fas fa-newspaper"></i> News</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="navbar">
+                <div class="dashboard-title">Dashboard</div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="navbar-icons">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-bell"></i>
+                    <div class="user-avatar"></div> </div>
+            </header>
+
+            <section class="summary-cards">
+                <div class="card total-balance">
+                    <h3>TOTAL BALANCE</h3>
+                    <h1>$154,610.<small>00</small></h1>
+                </div>
+                <div class="card summary-item">
+                    <p>Today</p>
+                    <span class="negative">-2.5% <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="card summary-item">
+                    <p>7 Days</p>
+                    <span class="positive">+4.25% <i class="fas fa-caret-up"></i></span>
+                </div>
+                <div class="card summary-item">
+                    <p>30 Days</p>
+                    <span class="positive">+11.5% <i class="fas fa-caret-up"></i></span>
+                </div>
+            </section>
+
+            <section class="crypto-overview">
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <img src="https://via.placeholder.com/20" alt="Bitcoin">
+                        <div>
+                            <h4>Bitcoin</h4>
+                            <p>BTC</p>
+                        </div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>$52,291</h2>
+                    <p class="positive">+0.25%</p>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <img src="https://via.placeholder.com/20" alt="Litecoin">
+                        <div>
+                            <h4>Litecoin</h4>
+                            <p>LTC</p>
+                        </div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>$8,291</h2>
+                    <p class="positive">+0.25%</p>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <img src="https://via.placeholder.com/20" alt="Ethereum">
+                        <div>
+                            <h4>Ethereum</h4>
+                            <p>ETH</p>
+                        </div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>$28,291</h2>
+                    <p class="positive">+0.25%</p>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <img src="https://via.placeholder.com/20" alt="Solana">
+                        <div>
+                            <h4>Solana</h4>
+                            <p>SOL</p>
+                        </div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>$14,291</h2>
+                    <p class="negative">-0.25%</p>
+                    <div class="chart-placeholder"></div>
+                </div>
+            </section>
+
+            <section class="bottom-section">
+                <div class="my-portfolio card">
+                    <div class="card-header">
+                        <h3>My Portfolio</h3>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/20" alt="Bitcoin">
+                        <div>
+                            <h4>Bitcoin</h4>
+                            <p>BTC</p>
+                        </div>
+                        <span class="percentage">37%</span>
+                        <span class="positive">+2.8%</span>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/20" alt="Tether">
+                        <div>
+                            <h4>Tether</h4>
+                            <p>USDT</p>
+                        </div>
+                        <span class="percentage">23%</span>
+                        <span class="negative">-1.5%</span>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/20" alt="Ethereum">
+                        <div>
+                            <h4>Ethereum</h4>
+                            <p>ETH</p>
+                        </div>
+                        <span class="percentage">20%</span>
+                        <span class="negative">-1.5%</span>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/20" alt="Ripple">
+                        <div>
+                            <h4>Ripple</h4>
+                            <p>XLA</p>
+                        </div>
+                        <span class="percentage">17%</span>
+                        <span class="positive">+3.5%</span>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/20" alt="Ethereum">
+                        <div>
+                            <h4>Ethereum</h4>
+                            <p>ETH</p>
+                        </div>
+                        <span class="percentage">10%</span>
+                        <span class="positive">+2.5%</span>
+                    </div>
+                </div>
+
+                <div class="chart-container card">
+                    <div class="card-header">
+                        <h3>Chart</h3>
+                        <div class="chart-options">
+                            <span>1H</span>
+                            <span>24H</span>
+                            <span>1W</span>
+                            <span>1M</span>
+                            <span>1Y</span>
+                        </div>
+                        <div class="currency-selector">
+                            <span>BTC/USD</span>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <h4>Bitcoin/BTC</h4>
+                    <h2>$38,252.02</h2>
+                    <div class="large-chart-placeholder">
+                        <img src="https://via.placeholder.com/600x250/343a40/ffffff?text=Chart+Placeholder" alt="Large Chart">
+                    </div>
+                    <div class="chart-footer">
+                        <span>10,000</span>
+                        <span>20,000</span>
+                        <span>30,000</span>
+                        <span>40,000</span>
+                        <span>50,000</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
