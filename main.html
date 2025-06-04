@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.min.js"></script>
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <img src="https://via.placeholder.com/30" alt="Logo"> </div>
+                <img src="https://via.placeholder.com/50" alt="Logo"> </div>
             <nav class="navigation">
                 <ul>
                     <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
@@ -63,55 +65,63 @@
             <section class="crypto-overview">
                 <div class="crypto-card">
                     <div class="crypto-header">
-                        <img src="https://via.placeholder.com/20" alt="Bitcoin">
+                        <img src="https://via.placeholder.com/35/007AFF/FFFFFF?text=AAPL" alt="Apple">
                         <div>
-                            <h4>Bitcoin</h4>
-                            <p>BTC</p>
+                            <h4>Apple Inc.</h4>
+                            <p>AAPL</p>
                         </div>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h2>$52,291</h2>
-                    <p class="positive">+0.25%</p>
-                    <div class="chart-placeholder"></div>
+                    <h2 id="aaplPrice">Loading...</h2>
+                    <p id="aaplChange" class=""></p>
+                    <div class="chart-placeholder">
+                        <canvas id="aaplChart"></canvas>
+                    </div>
                 </div>
                 <div class="crypto-card">
                     <div class="crypto-header">
-                        <img src="https://via.placeholder.com/20" alt="Litecoin">
+                        <img src="https://via.placeholder.com/35/4285F4/FFFFFF?text=GOOG" alt="Alphabet">
                         <div>
-                            <h4>Litecoin</h4>
-                            <p>LTC</p>
+                            <h4>Alphabet Inc.</h4>
+                            <p>GOOGL</p>
                         </div>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h2>$8,291</h2>
-                    <p class="positive">+0.25%</p>
-                    <div class="chart-placeholder"></div>
+                    <h2 id="googlPrice">Loading...</h2>
+                    <p id="googlChange" class=""></p>
+                    <div class="chart-placeholder">
+                        <canvas id="googlChart"></canvas>
+                    </div>
                 </div>
                 <div class="crypto-card">
                     <div class="crypto-header">
-                        <img src="https://via.placeholder.com/20" alt="Ethereum">
+                        <img src="https://via.placeholder.com/35/00A4EF/FFFFFF?text=MSFT" alt="Microsoft">
                         <div>
-                            <h4>Ethereum</h4>
-                            <p>ETH</p>
+                            <h4>Microsoft Corp.</h4>
+                            <p>MSFT</p>
                         </div>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h2>$28,291</h2>
-                    <p class="positive">+0.25%</p>
-                    <div class="chart-placeholder"></div>
+                    <h2 id="msftPrice">Loading...</h2>
+                    <p id="msftChange" class=""></p>
+                    <div class="chart-placeholder">
+                        <canvas id="msftChart"></canvas>
+                    </div>
                 </div>
                 <div class="crypto-card">
                     <div class="crypto-header">
-                        <img src="https://via.placeholder.com/20" alt="Solana">
+                        <img src="https://via.placeholder.com/35/FF9900/FFFFFF?text=AMZN" alt="Amazon">
                         <div>
-                            <h4>Solana</h4>
-                            <p>SOL</p>
+                            <h4>Amazon.com Inc.</h4>
+                            <p>AMZN</p>
                         </div>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h2>$14,291</h2>
-                    <p class="negative">-0.25%</p>
-                    <div class="chart-placeholder"></div>
+                    <h2 id="amznPrice">Loading...</h2>
+                    <p id="amznChange" class=""></p>
+                    <div class="chart-placeholder">
+                        <canvas id="amznChart"></canvas>
+                    </div>
                 </div>
             </section>
 
@@ -122,46 +132,46 @@
                         <i class="fas fa-ellipsis-h"></i>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/20" alt="Bitcoin">
+                        <img src="https://via.placeholder.com/30/FFD700/000000?text=AAPL" alt="Apple">
                         <div>
-                            <h4>Bitcoin</h4>
-                            <p>BTC</p>
+                            <h4>Apple Inc.</h4>
+                            <p>AAPL</p>
                         </div>
                         <span class="percentage">37%</span>
                         <span class="positive">+2.8%</span>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/20" alt="Tether">
+                        <img src="https://via.placeholder.com/30/808080/FFFFFF?text=TSLA" alt="Tesla">
                         <div>
-                            <h4>Tether</h4>
-                            <p>USDT</p>
+                            <h4>Tesla Inc.</h4>
+                            <p>TSLA</p>
                         </div>
                         <span class="percentage">23%</span>
                         <span class="negative">-1.5%</span>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/20" alt="Ethereum">
+                        <img src="https://via.placeholder.com/30/00A36C/FFFFFF?text=NVDA" alt="NVIDIA">
                         <div>
-                            <h4>Ethereum</h4>
-                            <p>ETH</p>
+                            <h4>NVIDIA Corp.</h4>
+                            <p>NVDA</p>
                         </div>
                         <span class="percentage">20%</span>
                         <span class="negative">-1.5%</span>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/20" alt="Ripple">
+                        <img src="https://via.placeholder.com/30/5D3FD3/FFFFFF?text=NFLX" alt="Netflix">
                         <div>
-                            <h4>Ripple</h4>
-                            <p>XLA</p>
+                            <h4>Netflix Inc.</h4>
+                            <p>NFLX</p>
                         </div>
                         <span class="percentage">17%</span>
                         <span class="positive">+3.5%</span>
                     </div>
                     <div class="portfolio-item">
-                        <img src="https://via.placeholder.com/20" alt="Ethereum">
+                        <img src="https://via.placeholder.com/30/ADD8E6/000000?text=ADBE" alt="Adobe">
                         <div>
-                            <h4>Ethereum</h4>
-                            <p>ETH</p>
+                            <h4>Adobe Inc.</h4>
+                            <p>ADBE</p>
                         </div>
                         <span class="percentage">10%</span>
                         <span class="positive">+2.5%</span>
@@ -172,32 +182,391 @@
                     <div class="card-header">
                         <h3>Chart</h3>
                         <div class="chart-options">
-                            <span>1H</span>
-                            <span>24H</span>
-                            <span>1W</span>
-                            <span>1M</span>
-                            <span>1Y</span>
+                            <span class="active" data-interval="1d">1D</span>
+                            <span data-interval="5d">5D</span>
+                            <span data-interval="1m">1M</span>
+                            <span data-interval="3m">3M</span>
+                            <span data-interval="6m">6M</span>
+                            <span data-interval="1y">1Y</span>
                         </div>
                         <div class="currency-selector">
-                            <span>BTC/USD</span>
+                            <span id="mainChartSymbol">IBM/USD</span>
                             <i class="fas fa-caret-down"></i>
                         </div>
                     </div>
-                    <h4>Bitcoin/BTC</h4>
-                    <h2>$38,252.02</h2>
-                    <div class="large-chart-placeholder">
-                        <img src="https://via.placeholder.com/600x250/343a40/ffffff?text=Chart+Placeholder" alt="Large Chart">
+                    <h4 id="mainChartCompanyName">International Business Machines Corp.</h4>
+                    <h2 id="mainChartCurrentPrice">$---.--</h2>
+                    <div class="large-chart-canvas-wrapper">
+                        <canvas id="mainChartCanvas"></canvas>
                     </div>
-                    <div class="chart-footer">
-                        <span>10,000</span>
-                        <span>20,000</span>
-                        <span>30,000</span>
-                        <span>40,000</span>
-                        <span>50,000</span>
                     </div>
-                </div>
             </section>
         </main>
     </div>
+
+    <script>
+        const API_KEY = 'HHQ56T1YMY0SF5Z6'; // Your Alpha Vantage API Key
+        // Define stock symbols for the overview cards
+        const stockSymbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN'];
+        const stockCompanyNames = {
+            'AAPL': 'Apple Inc.',
+            'GOOGL': 'Alphabet Inc.',
+            'MSFT': 'Microsoft Corp.',
+            'AMZN': 'Amazon.com Inc.',
+            'IBM': 'International Business Machines Corp.' // For the main chart default
+        };
+
+        let mainStockChart; // To store the Chart.js instance for the main chart
+
+        // Function to fetch daily adjusted time series data from Alpha Vantage
+        async function fetchDailyAdjusted(symbol) {
+            const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&outputsize=compact&apikey=${API_KEY}`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data['Time Series (Daily)']) {
+                    const timeSeries = data['Time Series (Daily)'];
+                    const labels = [];
+                    const prices = [];
+                    const dates = Object.keys(timeSeries).sort(); // Sort dates ascending
+
+                    // Get data for the last 30 days (or all if less than 30)
+                    const relevantDates = dates.slice(Math.max(0, dates.length - 30));
+
+                    relevantDates.forEach(date => {
+                        labels.push(date);
+                        prices.push(parseFloat(timeSeries[date]['4. close']));
+                    });
+                    
+                    const latestClose = parseFloat(timeSeries[dates[dates.length - 1]]['4. close']);
+                    const previousClose = parseFloat(timeSeries[dates[dates.length - 2]]['4. close']);
+                    const change = latestClose - previousClose;
+                    const changePercent = (change / previousClose) * 100;
+
+                    return {
+                        labels,
+                        prices,
+                        latestPrice: latestClose,
+                        change: change,
+                        changePercent: changePercent
+                    };
+                } else if (data['Error Message']) {
+                    console.error(`Alpha Vantage Error for ${symbol}: ${data['Error Message']}`);
+                    return null;
+                } else {
+                    console.error(`Unexpected Alpha Vantage response for ${symbol}:`, data);
+                    return null;
+                }
+            } catch (error) {
+                console.error(`Error fetching data for ${symbol}:`, error);
+                return null;
+            }
+        }
+
+        // Function to fetch intraday (e.g., 60min) data for the main chart
+        async function fetchIntradayData(symbol, interval) {
+            let functionType;
+            let outputsize = 'full'; // To get more historical data for main chart
+            let timeInterval = '60min'; // Default for intraday, can be changed if needed
+
+            switch (interval) {
+                case '1d': // Last 24 hours (approx) - using 60min and then filtering
+                case '5d': // Last 5 days - using 60min and then filtering
+                    functionType = 'TIME_SERIES_INTRADAY';
+                    outputsize = 'full'; // Need full history for filtering
+                    timeInterval = '60min';
+                    break;
+                case '1m': // Last 1 month
+                case '3m': // Last 3 months
+                case '6m': // Last 6 months
+                case '1y': // Last 1 year
+                    functionType = 'TIME_SERIES_DAILY_ADJUSTED';
+                    outputsize = 'full';
+                    break;
+                default:
+                    functionType = 'TIME_SERIES_DAILY_ADJUSTED'; // Default to daily
+                    outputsize = 'compact';
+                    break;
+            }
+
+            const url = `https://www.alphavantage.co/query?function=${functionType}&symbol=${symbol}&interval=${timeInterval}&outputsize=${outputsize}&apikey=${API_KEY}`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                let rawTimeSeries;
+                if (functionType === 'TIME_SERIES_INTRADAY') {
+                    rawTimeSeries = data[`Time Series (${timeInterval})`];
+                } else { // TIME_SERIES_DAILY_ADJUSTED
+                    rawTimeSeries = data['Time Series (Daily)'];
+                }
+
+                if (rawTimeSeries) {
+                    const labels = [];
+                    const prices = [];
+                    const dates = Object.keys(rawTimeSeries).sort();
+
+                    // Filter data based on interval
+                    let filteredDates = [];
+                    const today = new Date();
+
+                    if (interval === '1d' || interval === '5d') {
+                        // For intraday, we'll get 60min data and filter by date
+                        const daysToFilter = interval === '1d' ? 1 : 5;
+                        const cutoffDate = new Date(today);
+                        cutoffDate.setDate(today.getDate() - daysToFilter);
+                        
+                        filteredDates = dates.filter(dateStr => new Date(dateStr) >= cutoffDate);
+                    } else if (interval === '1m') {
+                        const cutoffDate = new Date(today);
+                        cutoffDate.setMonth(today.getMonth() - 1);
+                        filteredDates = dates.filter(dateStr => new Date(dateStr) >= cutoffDate);
+                    } else if (interval === '3m') {
+                        const cutoffDate = new Date(today);
+                        cutoffDate.setMonth(today.getMonth() - 3);
+                        filteredDates = dates.filter(dateStr => new Date(dateStr) >= cutoffDate);
+                    } else if (interval === '6m') {
+                        const cutoffDate = new Date(today);
+                        cutoffDate.setMonth(today.getMonth() - 6);
+                        filteredDates = dates.filter(dateStr => new Date(dateStr) >= cutoffDate);
+                    } else if (interval === '1y') {
+                        const cutoffDate = new Date(today);
+                        cutoffDate.setFullYear(today.getFullYear() - 1);
+                        filteredDates = dates.filter(dateStr => new Date(dateStr) >= cutoffDate);
+                    } else {
+                        filteredDates = dates; // Default to all if no interval match
+                    }
+
+                    filteredDates.forEach(date => {
+                        labels.push(date);
+                        if (functionType === 'TIME_SERIES_INTRADAY') {
+                            prices.push(parseFloat(rawTimeSeries[date]['4. close']));
+                        } else { // Daily adjusted
+                            prices.push(parseFloat(rawTimeSeries[date]['4. close']));
+                        }
+                    });
+
+                    // Get the latest price and change for display
+                    const latestDate = dates[dates.length - 1];
+                    const secondLatestDate = dates[dates.length - 2];
+                    const latestClose = parseFloat(rawTimeSeries[latestDate]['4. close']);
+                    const previousClose = parseFloat(rawTimeSeries[secondLatestDate]['4. close']);
+                    const change = latestClose - previousClose;
+                    const changePercent = (change / previousClose) * 100;
+
+                    return {
+                        labels,
+                        prices,
+                        latestPrice: latestClose,
+                        change: change,
+                        changePercent: changePercent
+                    };
+                } else if (data['Error Message']) {
+                    console.error(`Alpha Vantage Error for ${symbol} (${interval}): ${data['Error Message']}`);
+                    return null;
+                } else {
+                    console.error(`Unexpected Alpha Vantage response for ${symbol} (${interval}):`, data);
+                    return null;
+                }
+            } catch (error) {
+                console.error(`Error fetching data for ${symbol} (${interval}):`, error);
+                return null;
+            }
+        }
+
+
+        // Function to render a Chart.js mini chart
+        function renderMiniChart(canvasId, labels, prices) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+
+            // Destroy existing chart instance if it exists
+            if (Chart.getChart(canvasId)) {
+                Chart.getChart(canvasId).destroy();
+            }
+
+            // Determine line color based on overall trend
+            const firstPrice = prices[0];
+            const lastPrice = prices[prices.length - 1];
+            const lineColor = lastPrice >= firstPrice ? 'var(--positive-color)' : 'var(--negative-color)';
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: prices,
+                        borderColor: lineColor,
+                        borderWidth: 1.5,
+                        fill: false,
+                        pointRadius: 0,
+                        tension: 0.3 // Smoothness of the line
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: false } // Disable tooltips for mini charts
+                    },
+                    scales: {
+                        x: { display: false }, // Hide X-axis
+                        y: { display: false }  // Hide Y-axis
+                    },
+                    elements: {
+                        line: {
+                            tension: 0.4
+                        }
+                    }
+                }
+            });
+        }
+
+        // Function to render the main Chart.js chart
+        async function renderMainChart(symbol, interval = '1m') { // Default to 1 month
+            const data = await fetchIntradayData(symbol, interval);
+            if (!data) {
+                document.getElementById('mainChartCurrentPrice').textContent = 'Error';
+                return;
+            }
+
+            document.getElementById('mainChartSymbol').textContent = `${symbol}/USD`;
+            document.getElementById('mainChartCompanyName').textContent = stockCompanyNames[symbol] || symbol;
+            document.getElementById('mainChartCurrentPrice').textContent = `$${data.latestPrice.toFixed(2)}`;
+
+            const ctx = document.getElementById('mainChartCanvas').getContext('2d');
+
+            // Destroy existing chart instance if it exists
+            if (mainStockChart) {
+                mainStockChart.destroy();
+            }
+
+            mainStockChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: `${symbol} Price`,
+                        data: data.prices,
+                        borderColor: 'var(--accent-color)',
+                        backgroundColor: 'rgba(255, 193, 7, 0.1)', // Light fill below the line
+                        borderWidth: 2,
+                        pointRadius: 0,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return `$${context.parsed.y.toFixed(2)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: (interval === '1d' || interval === '5d') ? 'hour' : 'day', // Adjust unit based on interval
+                                tooltipFormat: 'MMM dd, yyyy HH:mm', // Full date and time for intraday
+                                displayFormats: {
+                                    hour: 'HH:mm',
+                                    day: 'MMM dd'
+                                }
+                            },
+                            grid: {
+                                color: 'var(--border-color)',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: 'var(--light-text-color)',
+                                autoSkip: true,
+                                maxTicksLimit: 10
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'var(--border-color)',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: 'var(--light-text-color)',
+                                callback: function(value) {
+                                    return '$' + value.toFixed(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Function to update the main chart when interval options are clicked
+        function setupChartIntervalListeners(symbol) {
+            const chartOptions = document.querySelector('.chart-options');
+            chartOptions.addEventListener('click', async (event) => {
+                const target = event.target;
+                if (target.tagName === 'SPAN' && target.hasAttribute('data-interval')) {
+                    // Remove 'active' class from all spans
+                    chartOptions.querySelectorAll('span').forEach(span => {
+                        span.classList.remove('active');
+                    });
+                    // Add 'active' class to the clicked span
+                    target.classList.add('active');
+
+                    const interval = target.dataset.interval;
+                    await renderMainChart(symbol, interval);
+                }
+            });
+        }
+
+
+        // Main initialization function
+        async function initializeDashboard() {
+            // Render mini charts for crypto-overview section
+            for (const symbol of stockSymbols) {
+                const data = await fetchDailyAdjusted(symbol);
+                if (data) {
+                    document.getElementById(`${symbol.toLowerCase()}Price`).textContent = `$${data.latestPrice.toFixed(2)}`;
+                    const changeElement = document.getElementById(`${symbol.toLowerCase()}Change`);
+                    changeElement.textContent = `${data.change.toFixed(2)} (${data.changePercent.toFixed(2)}%)`;
+                    changeElement.classList.remove('positive', 'negative'); // Clear previous
+                    changeElement.classList.add(data.change >= 0 ? 'positive' : 'negative');
+                    renderMiniChart(`${symbol.toLowerCase()}Chart`, data.labels, data.prices);
+                } else {
+                    document.getElementById(`${symbol.toLowerCase()}Price`).textContent = 'N/A';
+                    document.getElementById(`${symbol.toLowerCase()}Change`).textContent = 'N/A';
+                }
+            }
+
+            // Render the default main chart (e.g., IBM, 1 month)
+            const defaultMainSymbol = 'IBM'; // You can change this
+            const defaultMainInterval = '1m';
+            await renderMainChart(defaultMainSymbol, defaultMainInterval);
+            setupChartIntervalListeners(defaultMainSymbol); // Set up listeners for default symbol
+        }
+
+
+        // Initialize dashboard when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeDashboard);
+
+        // Optional: Re-render charts on window resize (Chart.js is generally responsive but sometimes helps)
+        window.addEventListener('resize', () => {
+            if (mainStockChart) mainStockChart.resize(); // Ensure main chart resizes
+            stockSymbols.forEach(symbol => {
+                const chartInstance = Chart.getChart(`${symbol.toLowerCase()}Chart`);
+                if (chartInstance) chartInstance.resize();
+            });
+        });
+    </script>
 </body>
 </html>
